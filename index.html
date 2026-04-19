@@ -1,262 +1,113 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- SOLO TE DEJO LAS PARTES MODIFICADAS PARA QUE NO ROMPAS NADA -->
 
-<title>Graciela & Francisco</title>
+<!-- ❌ ELIMINA COMPLETO -->
+<div class="flowers-header">...</div>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+<!-- ❌ ELIMINA -->
+<p class="hero-date">7 · Noviembre · 2026</p>
 
+
+<!-- ✨ AGREGA CLASES DE ANIMACIÓN -->
+<div class="hero fade-in">
+<div class="page-section fade-in d1">
+<div class="cel-card fade-in d2">
+<div class="info-grid fade-in d2">
+<div class="venue-grid fade-in d3">
+<div class="map-section fade-in d3">
+<div class="lista-section fade-in d3">
+<div class="form-outer fade-in d4">
+<footer class="fade-in d4">
+
+
+<!-- ✨ REEMPLAZA INFO-GRID (ORDEN CORRECTO) -->
+<div class="info-grid">
+  <div class="info-item">
+    <span class="info-label">Noviembre</span>
+    <span class="info-value">7</span>
+    <span class="info-sub">2026</span>
+  </div>
+
+  <div class="divider-v"></div>
+
+  <div class="info-item">
+    <span class="info-label">Lugar</span>
+    <span class="info-value-sm">Parroquia del Santísimo<br>Sacramento de Pirque</span>
+  </div>
+
+  <div class="divider-v"></div>
+
+  <div class="info-item">
+    <span class="info-label">A las</span>
+    <span class="info-value">18:00</span>
+    <span class="info-sub">Horas</span>
+  </div>
+</div>
+
+
+<!-- ✨ LISTA SIN EMOJI -->
+<div class="lista-icon"></div>
+
+
+<!-- ✨ CHECKBOXES -->
 <style>
-
-/* ===== VARIABLES ===== */
-:root {
-  --paper:#f5efe6;
-  --taupe:#8c7b6b;
-  --text:#3e3428;
-  --border:#dcd6cd;
-}
-
-/* ===== BASE ===== */
-*{margin:0;padding:0;box-sizing:border-box;}
-
-body{
-  font-family:'Cormorant Garamond',serif;
-  color:var(--text);
-  background:var(--paper);
-  line-height:1.6;
-}
-
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  background:url('https://www.transparenttextures.com/patterns/paper-fibers.png');
-  opacity:.2;
-  pointer-events:none;
-}
-
-/* ===== HERO ===== */
-.hero{
-  text-align:center;
-  padding:60px 20px 30px;
-}
-
-.hero h1{
-  font-size:clamp(58px,10vw,110px);
-  font-weight:300;
-  letter-spacing:3px;
-}
-
-.hero span{
-  display:block;
-  font-style:italic;
-  letter-spacing:6px;
-  margin:10px 0;
-  color:var(--taupe);
-}
-
-.hero::after{
-  content:"";
-  width:40px;
-  height:1px;
-  background:var(--taupe);
-  display:block;
-  margin:25px auto;
-}
-
-/* ===== SECCIONES ===== */
-.section{
-  max-width:600px;
-  margin:0 auto;
-  padding:30px 20px;
-  text-align:center;
-}
-
-.label{
-  font-family:'Raleway',sans-serif;
-  font-size:10px;
-  letter-spacing:4px;
-  text-transform:uppercase;
-  color:var(--taupe);
-  margin-bottom:10px;
-}
-
-/* ===== INFO ===== */
-.info{
-  margin-top:20px;
-  display:flex;
-  flex-direction:column;
-  gap:14px;
-}
-
-/* ===== MAP ===== */
-.map{
-  max-width:340px;
-  margin:10px auto;
-}
-
-.map img{
-  width:100%;
-  opacity:.9;
-}
-
-/* ===== LISTA ===== */
-.lista{
-  padding:20px;
-}
-
-.lista button{
-  margin-top:15px;
-  border:1px solid var(--taupe);
-  background:none;
-  padding:10px 25px;
-  font-family:'Raleway',sans-serif;
-  letter-spacing:3px;
-  cursor:pointer;
-}
-
-/* ===== FORM ===== */
-form{
-  display:flex;
-  flex-direction:column;
-  gap:20px;
-}
-
-input,select{
-  border:none;
-  border-bottom:1px solid var(--border);
-  padding:10px;
-  background:transparent;
-  font-family:'Raleway';
-}
-
-button{
-  border:1px solid var(--taupe);
-  background:none;
-  padding:12px;
-  font-family:'Raleway';
-  letter-spacing:4px;
-  cursor:pointer;
-}
-
-button:hover{
-  background:var(--taupe);
-  color:white;
-}
-
-/* ===== CHECKBOX CUSTOM ===== */
-.checkbox{
-  display:flex;
-  gap:10px;
-  align-items:center;
-  justify-content:center;
-}
-
-.checkbox input{
+.checkbox-group input[type="checkbox"]{
   appearance:none;
   width:16px;
   height:16px;
   border:1px solid var(--taupe);
-  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
-
-.checkbox input:checked::after{
-  content:"X";
-  position:absolute;
-  top:-2px;
-  left:3px;
-  font-size:14px;
+.checkbox-group input[type="checkbox"]:checked::after{
+  content:"✕";
+  font-size:11px;
 }
-
-/* ===== FOOTER ===== */
-footer{
-  text-align:center;
-  padding:30px;
-  font-style:italic;
-  color:var(--taupe);
-}
-
-/* ===== MICRO ===== */
-::selection{
-  background:var(--taupe);
-  color:white;
-}
-
 </style>
-</head>
 
-<body>
 
-<!-- HERO -->
-<section class="hero">
-  <h1>Graciela</h1>
-  <span>&</span>
-  <h1>Francisco</h1>
-</section>
+<!-- ✨ ESPACIADO MÁS CORTO -->
+<style>
+.page-section{ padding:28px 24px 48px; }
+.lista-section{ padding:40px 24px; }
+.form-outer{ padding:40px 24px; }
+.cel-card{ padding:40px 32px; }
+.lista-inner{ padding:36px 32px; }
+.form-card{ padding:40px 34px; }
+</style>
 
-<!-- CELEBRACIÓN -->
-<section class="section">
-  <div class="label">Celebración</div>
 
-  <div class="info">
-    <div>07 Noviembre 2026</div>
-    <div>Casona X / Iglesia X</div>
-    <div>17:00 hrs</div>
-  </div>
-</section>
-
-<!-- MAPA -->
-<section class="section map">
-  <img src="TU_IMAGEN_MAPA_AQUI.jpg">
-</section>
-
-<!-- LISTA -->
-<section class="section lista">
-  <div class="label">Lista de novios</div>
-  <p>Tu presencia es nuestro mejor regalo.</p>
-  <button disabled>Próximamente</button>
-</section>
-
-<!-- FORM -->
-<section class="section">
-  <div class="label">Confirma tu asistencia</div>
-
-  <form id="form">
-
-    <input type="text" placeholder="Nombre" required>
-    <input type="email" placeholder="Email" required>
-
-    <select required>
-      <option value="">¿Asistirás?</option>
-      <option>Sí</option>
-      <option>No</option>
-    </select>
-
-    <div class="checkbox">
-      <input type="checkbox" id="acompanante">
-      <label for="acompanante">Voy con acompañante</label>
-    </div>
-
-    <button type="submit">Confirmar</button>
-
-    <p id="msg" style="display:none;">¡Gracias! Tu confirmación ha sido registrada.</p>
-
-  </form>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  Graciela & Francisco
-</footer>
+<!-- ✨ ANIMACIONES -->
+<style>
+.fade-in{
+  opacity:0;
+  transform:translateY(18px);
+  transition:all 1.1s cubic-bezier(.22,.61,.36,1);
+}
+.fade-in.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+.d1{transition-delay:.15s;}
+.d2{transition-delay:.3s;}
+.d3{transition-delay:.45s;}
+.d4{transition-delay:.6s;}
+</style>
 
 <script>
-document.getElementById("form").addEventListener("submit", function(e){
-  e.preventDefault();
-  document.getElementById("msg").style.display="block";
-});
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+    }
+  });
+},{threshold:0.18});
+
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
 </script>
 
-</body>
-</html>
+
+<!-- ✨ MENSAJE SIN EMOJI -->
+<p class="form-msg">
+  ¡Gracias! Tu confirmación ha sido registrada.
+</p>
